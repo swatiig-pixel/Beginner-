@@ -19,3 +19,21 @@ def length_converter():
 
   else:
     print("INVALID CHOICE!!!!")
+
+
+def weight_converter():
+  print("\nWEIGHT CONVERTER")
+  print("1.Grams to Kilograms")
+  print("Kilograms to pounds")
+  choice = int(input("Choose option (1/2): "))
+
+  if choice == 1:
+    g = float(input("Enter weight in grams: "))
+    print(f"{g} g = {g/1000:.2f} kg")
+
+  elif choice == 2:
+    kg = float(input("Enter weight in Kilograms: "))
+    print(f"{kg} kg = {kg*2.20462:.2f} lbs")
+
+  else:
+    print("INVALID CHOICE!!!")
