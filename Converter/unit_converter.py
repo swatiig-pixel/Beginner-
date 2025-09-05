@@ -1,3 +1,12 @@
+from turtle import Turtle, Screen
+import turtle
+
+screen = Screen()
+screen.title("Temperture Converter")
+screen.bgcolor("lightblue")
+
+
+
 def length_converter():
   print("\nLENGTH CONVERTER")
   print("1.Centimeters to Meters")
@@ -24,7 +33,7 @@ def length_converter():
 def weight_converter():
   print("\nWEIGHT CONVERTER")
   print("1.Grams to Kilograms")
-  print("Kilograms to pounds")
+  print("2.Kilograms to pounds")
   choice = int(input("Choose option (1/2): "))
 
   if choice == 1:
@@ -37,3 +46,18 @@ def weight_converter():
 
   else:
     print("INVALID CHOICE!!!")
+
+
+user_choice = screen.textinput("Choose Conversion","Type 'A' Length Converter\nType 'B' Weight Converter")
+
+if user_choice and user_choice.upper() == "A":
+
+  length_converter()
+
+elif user_choice and user_choice.upper() == "B":
+
+  weight_converter()
+
+else:
+  print("INVALID CHOICE!!!!")
+  
