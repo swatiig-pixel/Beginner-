@@ -7,12 +7,8 @@ screen.bgcolor("lightblue")
 
 
 
-def length_converter():
-  print("\nLENGTH CONVERTER")
-  print("1.Centimeters to Meters")
-  print("2.Meters to Kilometers")
-  print("3.Kilometers to Miles")
-  choice = int(input("Choose option(1/2/3): "))
+def length_converter(choice):
+
 
   if choice == 1:
     cm = float(input("Enter length in cm: "))
@@ -51,8 +47,17 @@ def weight_converter():
 user_choice = screen.textinput("Choose Conversion","Type 'A' Length Converter\nType 'B' Weight Converter")
 
 if user_choice and user_choice.upper() == "A":
+  t = turtle.Turtle()
+  t.hideturtle()
+  t.penup()
+  t.goto(-100,20)
+  t.pendown()
+  t.color("darkblue")
+  t.write("\nLENGTH CONVERTER\n1.Centimeters to Meters\n2.Meters to Kilometers\n3.Kilometers to Miles")
+  lenght_choice = screen.textinput("Enter your Choice(1/2/3):")
+  length_converter(lenght_choice)
+  screen.exitonclick()
 
-  length_converter()
 
 elif user_choice and user_choice.upper() == "B":
 
