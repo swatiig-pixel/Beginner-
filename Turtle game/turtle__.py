@@ -6,33 +6,21 @@ screen = Screen()
 screen.setup(width=400,height=400)
 screen.bgcolor("pink")
 
-t = turtle()
-t.shape("turtle")
 
-timmy_the_turtle = t.Turtle()
+t = Turtle("turtle")
+def move_forward():
+  t.forward(7)
 
-colours = ["black","blue","pink","red","yellow","green","orange","purple","brown","wheat"]
-
-t.colormode(255)
-
-def random_color():
-    r = random.randint(0,255)
-    g = random.randint(0,255)
-    b = random.randint(0,255)
-    rand_color = (r,g,b)
-    return rand_color
+def upadating():
+    t.penup()
+    t.goto(x=0,y=-170)
+    t.left(90)
+    screen.listen()
+    screen.onkey(key="space",fun= move_forward)
 
 
 
-degre = [90,180,0,270]
 
-for walk in range(200):
-    degree = random.choice(degre)
-    timmy_the_turtle.right(degree)
-    timmy_the_turtle.color(random_color())
-    timmy_the_turtle.forward(15)
-    timmy_the_turtle.speed(2400)
-    timmy_the_turtle.width(5)
 
 
 
