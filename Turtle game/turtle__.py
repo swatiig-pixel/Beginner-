@@ -1,33 +1,26 @@
-from turtle import Turtle, Screen
-import turtle
-import random
+from turtle import Turtle,Screen
 
-screen = Screen()
-screen.setup(width=400,height=400)
-screen.bgcolor("pink")
+STARTING_POINT = (0,-280)
+MOVE = 10
+FINISHING_POINT = 280
 
+class Player(Turtle):
 
-t = Turtle("turtle")
-def move_forward():
-  t.forward(7)
+  def __init__(self):
+    super().__init__()
+    self.shape("turtle")
+    self.setheading(90)
+    self.penup()
+    self.goto(0,-280)
+    self.color("black")
 
-def upadating():
-    t.penup()
-    t.goto(x=0,y=-170)
-    t.left(90)
-    screen.listen()
-    screen.onkey(key="space",fun= move_forward)
+  def space(self):
+    self.forward(MOVE)
 
+  def refresh(self):
+    self.goto(STARTING_POINT)
 
-
-
-
-
-
-
-
-screen = Screen()
-screen.exitonclick()
+  
 
 
 
