@@ -12,3 +12,6 @@ class Ball(Turtle):
   def move(self):
     self.setheading(random.randint(0,180))
     self.forward(20)
+
+  def bounce(self,num):
+    self.setheading(num +95)
