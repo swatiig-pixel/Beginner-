@@ -7,16 +7,14 @@ class Brick(Turtle):
     self.shape("square")
     self.penup()
     self.shapesize(stretch_len=3,stretch_wid=1)
-    self.color("black")
-    self.goto(0,-280)
+    self.color("white")
+    self.goto(0,-380)
 
 
   def left_move(self):
-    self.backward(10)
+    self.backward(25)
 
   def right_move(self):
-    self.forward(10)
+    self.forward(25)
+    self.move_speed = 1
 
-  def bounce(self):
-    self.setheading(0)
-    self.forward(10)
