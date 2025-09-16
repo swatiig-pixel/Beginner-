@@ -10,5 +10,7 @@ dot = Dots()
 
 
 
+
+
 screen.exitonclick()
 
