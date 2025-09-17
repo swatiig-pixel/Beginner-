@@ -29,3 +29,17 @@ class Dice(Turtle):
     self.color("black")
     self.goto(-100,-40)
     self.write(f"{choice}",align="center",font=("Arial",27,"bold"))
+
+  def refresh(self):
+    self.clear()
+    self.intro()
+    self.head()
+    self.random_num()
+
+
+  def dots(self):
+    self.shape("circle")
+    self.penup()
+    self.color("black")
+    self.goto(150,-25)
+    self.shapesize(stretch_wid=0.5,stretch_len=0.5)

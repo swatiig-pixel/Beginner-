@@ -13,6 +13,11 @@ head = dice.head()
 intro = dice.intro()
 random_num = dice.random_num()
 
+screen.listen()
+screen.onkey(dice.refresh,key="space")
+
+dot = dice.dot()
+
 
 
 
