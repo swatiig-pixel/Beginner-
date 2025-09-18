@@ -7,6 +7,7 @@ screen.bgcolor("lightgreen")
 screen.tracer(0)
 
 dice = Dice()
+dot = dice.dots()
 screen.update()
 
 head = dice.head()
@@ -16,7 +17,6 @@ random_num = dice.random_num()
 screen.listen()
 screen.onkey(dice.refresh,key="space")
 
-dot = dice.dot()
 
 
 
