@@ -57,6 +57,57 @@ if level and level.upper() == "EASY":
     t.goto(0,-30)
     t.write(f"The number is {choice}",font=("Arial",19,"normal"),align="center")
 
+elif level and level.upper() == "HARD":
+  screen.clear()
+  screen.bgcolor("lightgreen")
+  t.penup()
+  t.goto(0,250)
+  t.write("You will get 05 chances to guess the number",font=("Arial",19,"normal"),align="center")
+  chances = 5
+  while chances != 0:
+    guess = screen.textinput("Guess the number","Between 1-100")
+    guess = int(guess)
+    if guess < choice:
+      screen.clear()
+      screen.bgcolor("lightgreen")
+      t.penup()
+      t.goto(0,250)
+      chances -= 1
+      t.write(f"You have {chances} chances left",font=("Arial",19,"normal"),align="center")
+      t.goto(0,225)
+      t.write("It's too low",font=("Arial",19,"normal"),align="center")
+    elif guess > choice:
+      screen.clear()
+      screen.bgcolor("lightgreen")
+      t.penup()
+      t.goto(0,250)
+      chances -= 1
+      t.write(f"You have {chances} chances left",font=("Arial",19,"normal"),align="center")
+      t.goto(0,225)
+      t.write("It's too high",font=("Arial",19,"normal"),align="center")
+    else:
+      screen.clear()
+      screen.bgcolor("lightgreen")
+      t.penup()
+      t.write("Your guess is right!!",font=("Arial",19,"normal"),align="center")
+      break
+
+  if chances == 0:
+    screen.clear()
+    screen.bgcolor("black")
+    t.penup()
+    t.pencolor("white")
+    t.write("YOU LOOSE!! YOU LEFT WITH ZERO CHANCES",font=("Arial",19,"normal"),align="center")
+    t.goto(0,-30)
+    t.write(f"The number is {choice}",font=("Arial",19,"normal"),align="center")
+
+else:
+  screen.clear()
+  screen.bgcolor("black")
+  t.penup()
+  t.pencolor("white")
+  t.write("INVALID INPUTT!!!",font=("Arial",19,"normal"),align="center")
+  
 
 
 
