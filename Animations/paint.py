@@ -27,7 +27,13 @@ def left_curve():
   forward(5)
   left(5)
 
+write("Reminder: \nClick up to turn pen upwards\nClick down to turn pen downwards\nClick up to turn pen upwards\nClick space move forward\n",font=("Comic sans",19,"normal"),align="center")
 
+
+
+listen()
+onkey(upwards(),"u")
+onkey(move(),"space")
 
 
 
