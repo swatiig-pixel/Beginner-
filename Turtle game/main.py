@@ -4,6 +4,7 @@ from blocks import Blocks
 from scorecard import Scorecard
 import time
 
+
 screen = Screen()
 screen.setup(600,600)
 screen.bgcolor("pink")
