@@ -41,25 +41,28 @@ def decode():
 
 window = Tk()
 window.minsize(width=600,height=600)
+window.config(bg="#FFF1CB")
 window.title("Encode and Decode")
 
 #label
-heading = Label(window,text="Encode and Decode your words!!")
-heading.pack(anchor="center")
+heading = Label(window,text="Encode and Decode your words!!",bg="#FFF1CB",fg="#FF8F8F",font=("Open Sans",24,"bold"))
+heading.pack(anchor="center",padx=20,pady=20)
 
 #textput
-text_in = Entry(window)
-text_in.pack(anchor="center")
+text_in = Entry(window,width=36,bg="#C2E2FA",fg="#FF8F8F",font=("Open Sans",14,"bold"))
+text_in.insert(0,"Enter word ")
+text_in.pack(anchor="center",padx=20,pady=20)
 
-num_skipped = Entry(window)
-num_skipped.pack()
+num_skipped = Entry(window,bg="#C2E2FA",fg="#FF8F8F",font=("Open Sans",14,"bold"))
+num_skipped.insert(0,"2")
+num_skipped.pack(padx=20,pady=20)
 
 #
-encode = Button(window,text="Encode",command=encode)
-encode.pack()
+encode = Button(window,text="Encode",command=encode,bg="#C2E2FA",fg="#FF8F8F",font=("Open Sans",15,"bold"))
+encode.pack(padx=20,pady=20)
 
-decode = Button(window,text="Decode",command=decode)
-decode.pack()
+decode = Button(window,text="Decode",command=decode,bg="#C2E2FA",fg="#FF8F8F",font=("Open Sans",15,"bold"))
+decode.pack(padx=20,pady=20)
 
 
 window.mainloop()
